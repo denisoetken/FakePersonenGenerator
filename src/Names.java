@@ -104,10 +104,29 @@ public class Names {
 
     // todo: immer 0??
     public String hausNummerErzeugen() {
-        int nummer = (int) Math.random();
+        int nummer = (int) (Math.random() * 10000);
         Integer hausnr = new Integer(nummer);
         this.hausnummer = hausnr.toString();
         return this.hausnummer;
+    }
+
+    public String eMailErzeugen(String vorName, String nachName) {
+        StringBuilder sb = new StringBuilder();
+
+        if (this.prozenter(50)) {
+            sb.append(this.Zufall(lateinWorte));
+        } else if (this.prozenter(80)) {
+            sb.append(vorName.trim() + "." + nachName.trim());
+        } else {
+            sb.append(nachName);
+        }
+
+        sb.append("@");
+        sb.append(this.Zufall(lateinWorte).trim());
+        sb.append(".");
+        sb.append(this.Zufall(topLevelDomains));
+        this.eMail = sb.toString();
+        return this.eMail;
     }
 
 // todo: Email
