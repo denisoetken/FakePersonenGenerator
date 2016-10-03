@@ -11,5 +11,6 @@ public class Runner {
         for (String h : p.anzahlSchleife(anzahl)) {
             System.out.println(h);
         }
+    // todo DAtei schreiben
     }
 }

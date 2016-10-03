@@ -102,7 +102,6 @@ public class Names {
         return this.strasse;
     }
 
-    // todo: immer 0??
     public String hausNummerErzeugen() {
         int nummer = (int) (Math.random() * 10000);
         Integer hausnr = new Integer(nummer);
