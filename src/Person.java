@@ -35,7 +35,6 @@ public class Person {
         p.append(nm.wohnOrtErzeugen());
         p.append("|");
         p.append(nm.eMailErzeugen(vorName, nachName));
-//todo: newLine
 
         return p.toString();
     }
