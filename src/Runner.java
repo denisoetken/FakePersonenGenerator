@@ -9,7 +9,7 @@ import java.util.HashSet;
  * Created by doetken on 14.09.2016.
  */
 //Standard-Branch, ohne GUI und Sortierung
-    
+
 public class Runner {
     public static void main(String[] args) {
         int anzahl = 10;
