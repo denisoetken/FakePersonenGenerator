@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.HashSet;
 
 /**
  * Created by Denis on 03.10.2016.
@@ -6,7 +6,12 @@ import java.util.*;
 public class Person {
     private HashSet<String> stringSet = new HashSet<String>();
     private Names nm = new Names();
-        
+    private String vorName;
+    private String nachName;
+    private String strasse;
+    private String hausNummer;
+    private String wohnOrt;
+    private String eMail;
 
     public Person() {
     }
@@ -20,23 +25,50 @@ public class Person {
     }
 
     private String personErzeugen() {
-        StringBuilder p = new StringBuilder();
+//        StringBuilder p = new StringBuilder();
+//
+//        String vorName = nm.vornamenErzeugen();
+//        String nachName = nm.nachNamenErzeugen();
+//
+//        p.append(vorName);
+//        p.append("|");
+//        p.append(nachName);
+//        p.append("|");
+//        p.append(nm.strasseErzeugen());
+//        p.append("|");
+//        p.append(nm.hausNummerErzeugen());
+//        p.append("|");
+//        p.append(nm.wohnOrtErzeugen());
+//        p.append("|");
+//        p.append(nm.eMailErzeugen(vorName, nachName));
 
-        String vorName = nm.vornamenErzeugen();
-        String nachName = nm.nachNamenErzeugen();
+        this.vorName = this.nm.vornamenErzeugen();
+        this.nachName = this.nm.nachNamenErzeugen();
+        this.strasse = this.nm.strasseErzeugen();
+        this.hausNummer = this.nm.hausNummerErzeugen();
+        this.wohnOrt = this.nm.wohnOrtErzeugen();
+        this.eMail = nm.eMailErzeugen(this.vorName, this.nachName);
 
-        p.append(vorName);
-        p.append("|");
-        p.append(nachName);
-        p.append("|");
-        p.append(nm.strasseErzeugen());
-        p.append("|");
-        p.append(nm.hausNummerErzeugen());
-        p.append("|");
-        p.append(nm.wohnOrtErzeugen());
-        p.append("|");
-        p.append(nm.eMailErzeugen(vorName, nachName));
+        return this.vorName + "|" + this.nachName + "|" + this.strasse + "|" + this.hausNummer + "|" + this.wohnOrt + "|" + this.eMail;
+    }
 
-        return p.toString();
+    public String getVorName() {
+        return vorName;
+    }
+
+    public String getNachName() {
+        return nachName;
+    }
+
+    public String getStrasse() {
+        return strasse + " " + hausNummer;
+    }
+
+    public String getWohnOrt() {
+        return wohnOrt;
+    }
+
+    public String geteMail() {
+        return eMail;
     }
 }

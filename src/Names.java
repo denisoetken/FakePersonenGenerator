@@ -124,7 +124,7 @@ public class Names {
         sb.append(this.Zufall(lateinWorte).trim());
         sb.append(".");
         sb.append(this.Zufall(topLevelDomains));
-        this.eMail = sb.toString();
+        this.eMail = sb.toString().toLowerCase();
         return this.eMail;
     }
 
