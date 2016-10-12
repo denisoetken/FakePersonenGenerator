@@ -6,6 +6,7 @@ import java.util.*;
 public class Person {
     private HashSet<String> stringSet = new HashSet<String>();
     private Names nm = new Names();
+        
 
     public Person() {
     }
