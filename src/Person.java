@@ -25,23 +25,6 @@ public class Person {
     }
 
     private String personErzeugen() {
-//        StringBuilder p = new StringBuilder();
-//
-//        String vorName = nm.vornamenErzeugen();
-//        String nachName = nm.nachNamenErzeugen();
-//
-//        p.append(vorName);
-//        p.append("|");
-//        p.append(nachName);
-//        p.append("|");
-//        p.append(nm.strasseErzeugen());
-//        p.append("|");
-//        p.append(nm.hausNummerErzeugen());
-//        p.append("|");
-//        p.append(nm.wohnOrtErzeugen());
-//        p.append("|");
-//        p.append(nm.eMailErzeugen(vorName, nachName));
-
         this.vorName = this.nm.vornamenErzeugen();
         this.nachName = this.nm.nachNamenErzeugen();
         this.strasse = this.nm.strasseErzeugen();
@@ -49,7 +32,9 @@ public class Person {
         this.wohnOrt = this.nm.wohnOrtErzeugen();
         this.eMail = nm.eMailErzeugen(this.vorName, this.nachName);
 
-        return this.vorName + "|" + this.nachName + "|" + this.strasse + "|" + this.hausNummer + "|" + this.wohnOrt + "|" + this.eMail;
+        String gesamtPerson = this.vorName + "|" + this.nachName + "|" + this.strasse + "|" + this.hausNummer + "|" + this.wohnOrt + "|" + this.eMail;
+
+        return gesamtPerson;
     }
 
     public String getVorName() {
