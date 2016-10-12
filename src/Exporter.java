@@ -10,12 +10,13 @@ public class Exporter {
 
     public Exporter(int anzahl, String dateiName) throws IOException {
         this.anzahl = anzahl;
-        Person p = new Person();
+        Person p = new Person(dateiName);
         try (BufferedWriter wr = new BufferedWriter(new FileWriter(dateiName))) {
             for (String s : p.anzahlSchleife(anzahl)) {
                 wr.append(s);
                 wr.newLine();
             }
         }
+        System.out.println("Vorname: " + p.getVorName(3));
     }
 }
