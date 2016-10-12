@@ -46,6 +46,7 @@ public class Person {
 
     public String getVorName(int zeile) {
         String ergebnis = "leer";
+//        todo: komische Zahlen in der AUsgabe
         try {
             BufferedReader br = new BufferedReader(new FileReader(dateiname));
             int i = 1;
